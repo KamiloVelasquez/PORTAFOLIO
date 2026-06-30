@@ -17,7 +17,7 @@ import { useGithubRepos } from './hooks/useGithubRepos';
 
 function App() {
   const [showIntro, setShowIntro] = useState(true);
-  const { devRepos, dataRepos, loading } = useGithubRepos();
+  const { repos, loading } = useGithubRepos();
 
   const handleIntroComplete = useCallback(() => {
     setShowIntro(false);
@@ -36,7 +36,7 @@ function App() {
           <main>
             <Hero />
             <AmbientSwitch />
-            <DevSection repos={devRepos} loading={loading} />
+            <DevSection repos={repos} loading={loading} />
             <DataSection />
           </main>
 

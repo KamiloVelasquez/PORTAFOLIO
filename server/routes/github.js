@@ -3,11 +3,46 @@ import express from 'express';
 const router = express.Router();
 const GITHUB_API = 'https://api.github.com';
 const GITHUB_USERNAME = process.env.GITHUB_USERNAME || 'kamilovelasquez';
+const GITHUB_PER_PAGE = 100;
 
 // Cache simple en memoria
 let reposCache = null;
 let cacheTimestamp = 0;
 const CACHE_TTL = 5 * 60 * 1000; // 5 minutos
+
+async function fetchGithubReposFromApi() {
+  const headers = { 'Accept': 'application/vnd.github.v3+json' };
+  if (process.env.GITHUB_TOKEN) {
+    headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`;
+  }
+
+  let allRepos = [];
+  let page = 1;
+
+  while (true) {
+    const response = await fetch(
+      `${GITHUB_API}/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=${GITHUB_PER_PAGE}&page=${page}&type=public`,
+      { headers }
+    );
+
+    if (!response.ok) {
+      throw new Error(`GitHub API responded with ${response.status}`);
+    }
+
+    const repos = await response.json();
+    if (!Array.isArray(repos)) {
+      throw new Error('GitHub response was not an array');
+    }
+
+    allRepos = allRepos.concat(repos);
+    if (repos.length < GITHUB_PER_PAGE) {
+      break;
+    }
+    page += 1;
+  }
+
+  return allRepos;
+}
 
 function generateRepoDescription(name, language) {
   const normalized = name.toLowerCase();
@@ -47,16 +82,7 @@ router.get('/repos', async (req, res) => {
       headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`;
     }
 
-    const response = await fetch(
-      `${GITHUB_API}/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=20&type=public`,
-      { headers }
-    );
-
-    if (!response.ok) {
-      throw new Error(`GitHub API responded with ${response.status}`);
-    }
-
-    const repos = await response.json();
+    const repos = await fetchGithubReposFromApi();
 
     const filtered = repos.map(repo => ({
       id: repo.id,
