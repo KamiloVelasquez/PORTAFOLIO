@@ -16,6 +16,7 @@ Este portafolio está pensado para mostrar:
 
 ### Frontend
 - React
+- React DOM
 - Vite
 - Bootstrap
 - React Bootstrap
@@ -27,12 +28,12 @@ Este portafolio está pensado para mostrar:
 - Node.js
 - Express
 - CORS
-- Dotenv
+- dotenv
 
 ## Estructura del proyecto
 
 ```text
-PORTAFOLIO1/
+PORTAFOLIO/
 ├── client/                  # Aplicación frontend
 │   ├── public/
 │   ├── src/
@@ -69,9 +70,16 @@ npm run install:all
 
 Esto instalará las dependencias del proyecto raíz, del frontend y del backend.
 
+Si al ejecutar el frontend aparece un error indicando que faltan `react` o `react-dom`, instala las dependencias del cliente con:
+
+```bash
+cd client
+npm install react react-dom
+```
+
 ## Variables de entorno
 
-El backend utiliza un archivo .env dentro de la carpeta server.
+El backend utiliza un archivo `.env` dentro de la carpeta `server`.
 
 Ejemplo:
 
@@ -84,14 +92,14 @@ GITHUB_TOKEN=
 
 ### Descripción de variables
 
-- PORT: Puerto del servidor backend
-- CLIENT_URL: URL permitida para peticiones CORS desde el frontend
-- GITHUB_USERNAME: Usuario de GitHub para consultar repositorios
-- GITHUB_TOKEN: Token opcional para aumentar límites de la API de GitHub
+- `PORT`: Puerto donde escucha el backend
+- `CLIENT_URL`: URL permitida para peticiones CORS desde el frontend
+- `GITHUB_USERNAME`: Usuario de GitHub para consultar repositorios
+- `GITHUB_TOKEN`: Token opcional para aumentar límites de la API de GitHub
 
 ## Ejecución del proyecto
 
-### Opción 1: Ejecutar frontend y backend juntos
+### Ejecutar frontend y backend juntos
 
 Desde la raíz:
 
@@ -104,7 +112,7 @@ Esto iniciará:
 - Frontend en http://localhost:5173
 - Backend en http://localhost:3001
 
-### Opción 2: Ejecutar por separado
+### Ejecutar por separado
 
 #### Frontend
 
@@ -131,19 +139,17 @@ npm run start
 npm run install:all
 ```
 
-### Desde client
+### Desde `client`
 
 ```bash
-cd client
 npm run dev
 npm run build
 npm run preview
 ```
 
-### Desde server
+### Desde `server`
 
 ```bash
-cd server
 npm run dev
 npm run start
 ```
@@ -158,16 +164,15 @@ npm run start
 
 ## Endpoints del backend
 
-El servidor expone los siguientes endpoints:
-
-- GET /api/health: Verifica que el backend esté activo
-- GET /api/github/repos: Obtiene repositorios públicos del usuario
-- GET /api/github/profile: Obtiene datos básicos del perfil de GitHub
-- POST /api/chat: Envía mensajes al chatbot
+- `GET /api/health`: Verifica que el backend esté activo
+- `GET /api/github/repos`: Obtiene repositorios públicos del usuario
+- `GET /api/github/profile`: Obtiene datos básicos del perfil de GitHub
+- `POST /api/chat`: Envía mensajes al chatbot
 
 ## Notas importantes
 
-- Si el frontend no logra comunicarse con el backend, verifica que el servidor esté activo en el puerto 3001.
+- Si el frontend no logra comunicarse con el backend, verifica que el servidor esté activo en el puerto `3001`.
+- Si ves un error de React faltante en el frontend, asegúrate de haber instalado `react` y `react-dom` en la carpeta `client`.
 - En Windows PowerShell, puede ser necesario permitir scripts de ejecución para npm si aparece un error relacionado con políticas de ejecución.
 
 ## Autor
