@@ -1,0 +1,36 @@
+/* ============================================
+   APP — Global Application Styles
+   ============================================ */
+
+.app {
+  min-height: 100vh;
+  background-color: #0a0e17;
+}
+
+/* Smooth transitions between sections */
+main > section {
+  position: relative;
+}
+
+/* Gradient blend between sections */
+main > section + section::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(180deg, transparent, inherit);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Global link styles */
+a {
+  transition: color 0.2s ease;
+}
+
+/* Ensure proper stacking */
+.navbar {
+  z-index: 1050;
+}

@@ -1,0 +1,103 @@
+/* ============================================
+   PORTAFOLIO CAMILO VELÁSQUEZ
+   Custom Bootstrap Overrides & Global Styles
+   ============================================ */
+
+/* ---------- Custom Variables ---------- */
+$primary-dark: #0a0e17;
+$secondary-dark: #111827;
+$accent-cyan: #06d6a0;
+$accent-blue: #118ab2;
+$accent-purple: #7b2ff7;
+$accent-magenta: #e040fb;
+$accent-gold: #ffd166;
+$text-primary: #f0f0f0;
+$text-secondary: #a0aec0;
+$glass-bg: rgba(255, 255, 255, 0.05);
+$glass-border: rgba(255, 255, 255, 0.1);
+
+/* ---------- Bootstrap Overrides ---------- */
+$body-bg: $primary-dark;
+$body-color: $text-primary;
+$primary: $accent-cyan;
+$font-family-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+@import "bootstrap/scss/bootstrap";
+
+/* ---------- Custom Font Import ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+/* ---------- Global Styles ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: $primary-dark;
+  color: $text-primary;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: $primary-dark;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, $accent-cyan, $accent-purple);
+  border-radius: 4px;
+}
+
+/* ---------- Selection ---------- */
+::selection {
+  background: rgba($accent-cyan, 0.3);
+  color: $text-primary;
+}
+
+/* ---------- Glass Morphism ---------- */
+.glass-card {
+  background: $glass-bg;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid $glass-border;
+  border-radius: 16px;
+}
+
+/* ---------- Section Spacing ---------- */
+.section-padding {
+  padding: 6rem 0;
+}
+
+/* ---------- Gradient Texts ---------- */
+.gradient-text-dev {
+  background: linear-gradient(135deg, $accent-cyan, $accent-blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-data {
+  background: linear-gradient(135deg, $accent-purple, $accent-magenta);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ---------- Code Font ---------- */
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}

@@ -1,0 +1,55 @@
+{
+  "hero": {
+    "greeting": "Hola, soy",
+    "name": "Camilo Velásquez",
+    "title": "Full Stack Developer & Data Analyst",
+    "description": "Combino desarrollo full stack, análisis de datos y visualización para convertir problemas complejos en experiencias digitales útiles y decisiones más inteligentes.",
+    "cta_primary": "Ver mis proyectos",
+    "cta_secondary": "Explorar mi código"
+  },
+  "navbar": {
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "dashboards": "Dashboards",
+    "contact": "Contacto",
+    "language": "EN"
+  },
+  "ambient": {
+    "dev_title": "Ambiente Desarrollo",
+    "dev_subtitle": "Código, arquitectura y soluciones técnicas",
+    "data_title": "Ambiente Data",
+    "data_subtitle": "Análisis, visualización e insights",
+    "transition_text": "Explorando el otro lado..."
+  },
+  "dev_section": {
+    "title": "Proyectos de Desarrollo",
+    "subtitle": "Construyo aplicaciones web modernas con React, Node.js y APIs escalables, enfocadas en rendimiento, calidad y experiencia de usuario.",
+    "view_repo": "Ver repositorio",
+    "stars": "Estrellas",
+    "forks": "Forks",
+    "updated": "Actualizado",
+    "no_repos": "Cargando repositorios..."
+  },
+  "data_section": {
+    "title": "Análisis de Datos & Dashboards",
+    "subtitle": "Transformo datos en insights accionables con Power BI, SQL y Python para apoyar decisiones de negocio.",
+    "view_dashboard": "Ver dashboard",
+    "view_repo": "Ver repositorio",
+    "related_repo": "Repositorio relacionado"
+  },
+  "chatbot": {
+    "title": "Asistente Virtual",
+    "placeholder": "Escribe tu mensaje...",
+    "send": "Enviar",
+    "greeting": "¡Hola! 👋 Soy el asistente de Camilo. Puedo hablarte sobre su experiencia, stack tecnológico y proyectos.",
+    "error": "Hubo un error. Intenta de nuevo."
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "built_with": "Hecho con ❤️ usando React y datos"
+  },
+  "intro": {
+    "welcome": "Bienvenido",
+    "loading": "Cargando experiencia..."
+  }
+}

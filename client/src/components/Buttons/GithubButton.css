@@ -1,0 +1,64 @@
+.github-btn {
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.github-btn-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 12px 28px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+/* Primary variant */
+.github-btn-primary .github-btn-link {
+  background: linear-gradient(135deg, #06d6a0, #118ab2);
+  color: white;
+  box-shadow: 0 4px 16px rgba(6, 214, 160, 0.25);
+}
+
+.github-btn-primary:hover .github-btn-link {
+  box-shadow: 0 8px 32px rgba(6, 214, 160, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Secondary variant */
+.github-btn-secondary .github-btn-link {
+  background: transparent;
+  color: #06d6a0;
+  border: 2px solid rgba(6, 214, 160, 0.4);
+}
+
+.github-btn-secondary:hover .github-btn-link {
+  border-color: #06d6a0;
+  background: rgba(6, 214, 160, 0.08);
+  box-shadow: 0 4px 20px rgba(6, 214, 160, 0.15);
+}
+
+/* Icon */
+.github-btn-icon {
+  font-size: 1.25em;
+  transition: transform 0.3s ease;
+}
+
+.github-btn:hover .github-btn-icon {
+  transform: rotate(-10deg) scale(1.1);
+}
+
+/* Sizes */
+.github-btn-sm .github-btn-link {
+  padding: 8px 18px;
+  font-size: 0.85rem;
+  border-radius: 8px;
+}
+
+.github-btn-lg .github-btn-link {
+  padding: 16px 36px;
+  font-size: 1.1rem;
+  border-radius: 14px;
+}

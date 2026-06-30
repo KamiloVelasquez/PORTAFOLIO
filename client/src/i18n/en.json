@@ -1,0 +1,55 @@
+{
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Camilo Velásquez",
+    "title": "Full Stack Developer & Data Analyst",
+    "description": "I combine full stack development, data analysis and visualization to turn complex problems into useful digital experiences and smarter decisions.",
+    "cta_primary": "View my projects",
+    "cta_secondary": "Explore my code"
+  },
+  "navbar": {
+    "home": "Home",
+    "projects": "Projects",
+    "dashboards": "Dashboards",
+    "contact": "Contact",
+    "language": "ES"
+  },
+  "ambient": {
+    "dev_title": "Dev Environment",
+    "dev_subtitle": "Code, architecture and technical solutions",
+    "data_title": "Data Environment",
+    "data_subtitle": "Analysis, visualization and insights",
+    "transition_text": "Exploring the other side..."
+  },
+  "dev_section": {
+    "title": "Development Projects",
+    "subtitle": "I build modern web applications with React, Node.js and scalable APIs focused on performance, quality and user experience.",
+    "view_repo": "View repository",
+    "stars": "Stars",
+    "forks": "Forks",
+    "updated": "Updated",
+    "no_repos": "Loading repositories..."
+  },
+  "data_section": {
+    "title": "Data Analysis & Dashboards",
+    "subtitle": "I turn data into actionable insights with Power BI, SQL and Python to support business decisions.",
+    "view_dashboard": "View dashboard",
+    "view_repo": "View repository",
+    "related_repo": "Related repository"
+  },
+  "chatbot": {
+    "title": "Virtual Assistant",
+    "placeholder": "Type your message...",
+    "send": "Send",
+    "greeting": "Hello! 👋 I’m Camilo's assistant. I can talk about his experience, tech stack and projects.",
+    "error": "Something went wrong. Try again."
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "built_with": "Made with ❤️ using React and data"
+  },
+  "intro": {
+    "welcome": "Welcome",
+    "loading": "Loading experience..."
+  }
+}

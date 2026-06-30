@@ -1,0 +1,29 @@
+.github-icon-btn {
+  border-radius: 10px;
+}
+
+.github-icon-btn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  background: rgba(6, 214, 160, 0.1);
+  border: 1px solid rgba(6, 214, 160, 0.25);
+  color: #06d6a0;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.github-icon-btn-link:hover {
+  background: rgba(6, 214, 160, 0.18);
+  border-color: #06d6a0;
+  color: #06d6a0;
+  box-shadow: 0 4px 16px rgba(6, 214, 160, 0.15);
+}
+
+.github-icon-btn-link svg {
+  font-size: 1.1em;
+}

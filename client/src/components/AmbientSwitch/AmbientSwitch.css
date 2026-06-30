@@ -1,0 +1,96 @@
+.ambient-switch {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 4rem 2rem;
+}
+
+.ambient-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(123, 47, 247, 0.08) 0%,
+    rgba(6, 214, 160, 0.04) 40%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.ambient-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  width: 100%;
+  max-width: 900px;
+  z-index: 1;
+}
+
+.ambient-side {
+  flex: 1;
+  text-align: center;
+  padding: 2rem;
+}
+
+.ambient-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.dev-icon {
+  color: #06d6a0;
+}
+
+.data-icon {
+  color: #7b2ff7;
+}
+
+.ambient-side h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.ambient-side p {
+  color: #718096;
+  font-size: 0.95rem;
+}
+
+.ambient-divider {
+  width: 2px;
+  height: 120px;
+  background: linear-gradient(180deg, #06d6a0, #7b2ff7);
+  border-radius: 2px;
+  transform-origin: center;
+}
+
+.ambient-transition-text {
+  color: #4a5568;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-top: 2rem;
+  z-index: 1;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+@media (max-width: 768px) {
+  .ambient-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .ambient-divider {
+    width: 120px;
+    height: 2px;
+    transform-origin: center;
+  }
+
+  .ambient-side h3 {
+    font-size: 1.3rem;
+  }
+}
